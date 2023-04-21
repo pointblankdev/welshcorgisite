@@ -2,6 +2,7 @@ import { useMediaQuery } from '@studio-freight/hamo'
 import { Layout } from 'layouts/default'
 import dynamic from 'next/dynamic'
 import s from './home.module.scss'
+import ImageGrid from './image-grid'
 
 const WebGL = dynamic(
   () => import('components/webgl').then(({ WebGL }) => WebGL),
@@ -15,7 +16,9 @@ export default function Home() {
     <>
       {isDesktop === true && <WebGL />}
       <Layout theme="light">
-        <section className={s.hero}>satus + r3f</section>
+        <section className={s.hero}>
+          <ImageGrid />
+        </section>
       </Layout>
     </>
   )

@@ -1,31 +1,31 @@
 import { Link } from '@studio-freight/compono'
 import cn from 'clsx'
 import { Navigation } from 'components/navigation'
-import { useStore } from 'lib/store'
 import { forwardRef } from 'react'
-import { shallow } from 'zustand/shallow'
 import s from './header.module.scss'
 
 export const Header = forwardRef((_, ref) => {
-  const [navIsOpened, setNavIsOpened] = useStore(
-    ({ navIsOpened, setNavIsOpened }) => [navIsOpened, setNavIsOpened],
-    shallow
-  )
+  // const [navIsOpened, setNavIsOpened] = useStore(
+  //   ({ navIsOpened, setNavIsOpened }) => [navIsOpened, setNavIsOpened],
+  //   shallow
+  // )
 
   return (
     <header className={s.header} ref={ref}>
       <Navigation />
       <div className={cn('layout-block', s.head)}>
-        <button
+        {/* <button
           onClick={() => {
             setNavIsOpened(!navIsOpened)
           }}
         >
           menu
-        </button>
-        <div>
-          <Link href="/">home</Link>/<Link href="/gsap">gsap</Link>/
-          <Link href="/contact">contact</Link>
+        </button> */}
+        <div />
+        <div className={cn('links', s.links)}>
+          <Link href="#about">about</Link>
+          <Link href="#history">history</Link>
+          <Link href="#disord">join</Link>
         </div>
       </div>
     </header>

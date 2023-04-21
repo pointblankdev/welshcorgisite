@@ -15,16 +15,16 @@ import 'styles/global.scss'
 
 export const project = getProject('Satus', { state })
 
-const Stats = dynamic(
-  () => import('@studio-freight/compono').then(({ Stats }) => Stats),
-  { ssr: false }
-)
+// const Stats = dynamic(
+//   () => import('@studio-freight/compono').then(({ Stats }) => Stats),
+//   { ssr: false }
+// )
 
-const GridDebugger = dynamic(
-  () =>
-    import('@studio-freight/compono').then(({ GridDebugger }) => GridDebugger),
-  { ssr: false }
-)
+// const GridDebugger = dynamic(
+//   () =>
+//     import('@studio-freight/compono').then(({ GridDebugger }) => GridDebugger),
+//   { ssr: false }
+// )
 
 const Theatre = dynamic(
   () => import('components/theatre').then(({ Theatre }) => Theatre),
@@ -68,8 +68,8 @@ function MyApp({ Component, pageProps }) {
     <>
       {debug && (
         <>
-          <GridDebugger />
-          <Stats />
+          {/* <GridDebugger /> */}
+          {/* <Stats /> */}
           <Theatre />
         </>
       )}
