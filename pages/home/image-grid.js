@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic'
 import g from './image-grid.module.scss'
 
 const imageList = []
-for (let index = 1; index <= 250; index++) {
+for (let index = 1; index <= 300; index++) {
   imageList.push(
     dynamic(() => import(`../../components/image-components/Image${index}`), {
       ssr: false,
