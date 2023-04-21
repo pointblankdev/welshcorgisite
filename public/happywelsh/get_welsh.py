@@ -15,10 +15,7 @@ for i in range(1, 2001):
         continue
 
     img_url = f'{base_url}{i}.png'
-    try:
-        response = requests.get(img_url, timeout=3)
-    except:
-        print('to')
+    response = requests.get(img_url)
 
     if response.status_code == 200:
         with open(img_path, 'wb') as img_file:
