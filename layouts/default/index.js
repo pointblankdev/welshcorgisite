@@ -2,7 +2,6 @@ import { Cursor, CustomHead, Scrollbar } from '@studio-freight/compono'
 import { Lenis, useLenis } from '@studio-freight/react-lenis'
 import cn from 'clsx'
 import { Footer } from 'components/footer'
-import { Header } from 'components/header'
 import Router from 'next/router'
 import { useEffect } from 'react'
 import s from './layout.module.scss'
@@ -36,7 +35,7 @@ export function Layout({
           <div className={s.content}>
             <Cursor />
             <Scrollbar />
-            <Header />
+            {/* <Header /> */}
             <main className={s.main}>{children}</main>
             <Footer />
           </div>

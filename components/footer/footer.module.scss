@@ -2,8 +2,16 @@
   color: var(--theme-primary);
   background-color: var(--theme-secondary);
   padding: mobile-vw(20px) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @include desktop {
     padding: desktop-vw(40px) 0;
   }
+}
+
+.footerIcon {
+  font-size: 32px;
+  cursor: pointer;
 }
